@@ -1,6 +1,4 @@
-const wrapper = document.querySelector(".row");
-
-wrapper.addEventListener("click", function (event) {
+window.addEventListener("click", function (event) {
   if (event.target.dataset.action == "minus") {
     const parentNode = event.target.closest(".counter-wrapper");
     let counter = parentNode.querySelector("div[data-counter]");
