@@ -12,5 +12,4 @@ window.addEventListener("click", function (event) {
     let counter = parentNode.querySelector("div[data-counter]");
     counter.textContent = ++counter.textContent;
   }
-  toggleCartStatus();
 });

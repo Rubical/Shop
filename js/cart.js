@@ -1,6 +1,5 @@
 const cartWrapper = document.querySelector(".cart-wrapper");
 
-toggleCartStatus();
 window.addEventListener("click", function (event) {
   if (event.target.hasAttribute("data-cart")) {
     const targetEl = event.target.closest(".col-md-6");
@@ -38,4 +37,5 @@ window.addEventListener("click", function (event) {
 
     cartWrapper.insertAdjacentHTML("beforeend", cartHTML);
   }
+  toggleCartStatus();
 });

@@ -1,9 +1,13 @@
-const cardBody = document.querySelector(".cart-wrapper").parentElement;
-const cardWrapper = document.querySelector(".card-wrapper");
-const emptyCart = document.querySelector("[data-cart-empty]");
-
 function toggleCartStatus() {
-  if (cardWrapper.children.length > 0) {
-    emptyCart.classList.add("none");
+  const cartWrapper = document.querySelector(".cart-wrapper");
+  const cartEmptyBadge = document.querySelector("[data-cart-empty]");
+  const orderForm = document.querySelector("#order-form");
+
+  if (cartWrapper.children.length > 0) {
+    cartEmptyBadge.classList.add("none");
+    orderForm.classList.remove("none");
+  } else if ((cartWrapper.children.length = 0)) {
+    cartEmptyBadge.classList.remove("none");
+    orderForm.classList.add("none");
   }
 }
