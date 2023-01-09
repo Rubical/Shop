@@ -1,4 +1,5 @@
 const cartWrapper = document.querySelector(".cart-wrapper");
+/* Render product in cart */
 
 window.addEventListener("click", function (event) {
   if (event.target.hasAttribute("data-cart")) {
@@ -36,6 +37,6 @@ window.addEventListener("click", function (event) {
 							</div>`;
 
     cartWrapper.insertAdjacentHTML("beforeend", cartHTML);
+    toggleCartStatus();
   }
-  toggleCartStatus();
 });

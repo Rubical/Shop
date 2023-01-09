@@ -6,7 +6,7 @@ function toggleCartStatus() {
   if (cartWrapper.children.length > 0) {
     cartEmptyBadge.classList.add("none");
     orderForm.classList.remove("none");
-  } else if ((cartWrapper.children.length = 0)) {
+  } else {
     cartEmptyBadge.classList.remove("none");
     orderForm.classList.add("none");
   }
