@@ -9,13 +9,15 @@ window.addEventListener("click", function (event) {
       Number(counter.textContent) === 1
     ) {
       event.target.closest(".cart-item").remove();
-      toggleCartStatus();
     }
+    toggleCartStatus();
+    calcCartPrice();
   }
 
   if (event.target.dataset.action == "plus") {
     const parentNode = event.target.closest(".counter-wrapper");
     let counter = parentNode.querySelector("div[data-counter]");
     counter.textContent = ++counter.textContent;
+    calcCartPrice();
   }
 });
